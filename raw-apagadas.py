@@ -67,7 +67,7 @@ else:
 print()
 print(cores.verde(f"Total recebido : {total_recebidas}"))
 print(cores.verde(f"Total restante : {total_restantes}"))
-print(cores.azul(f"Fotos apagadas : {fotos_apagadas}"))
+print(cores.azul(f"Fotos apagadas : {fotos_apagadas}")) 
 print(cores.amarelo(f"Percentual de aprovacao: {percentual_aprovacao:.2f}%"))
 
 if fotos_apagadas < 0:
@@ -82,12 +82,15 @@ arquivo_txt = LOG_DIR / f"{nome_txt}.txt"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 with open(arquivo_txt, 'a', encoding='utf-8') as f:
     f.write("\n")
-    f.write("--- Resultado da selecao ---\n")
+    f.write("--- Resultado da seleção ---\n")
     f.write(f"Data: {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
     f.write(f"Pasta analisada: {PASTA_FOTOS}\n")
     f.write(f"Total recebido: {total_recebidas}\n")
     f.write(f"Total restante: {total_restantes}\n")
     f.write(f"Fotos apagadas: {fotos_apagadas}\n")
-    f.write(f"Percentual de aprovacao: {percentual_aprovacao:.2f}%\n")
+    f.write(f"Percentual de aprovação: {percentual_aprovacao:.2f}%\n")
 
 print(cores.amarelo(f"\nResultado adicionado em '{arquivo_txt.name}' sem sobrescrever."))
+
+
+
