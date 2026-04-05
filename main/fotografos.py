@@ -1,8 +1,14 @@
 import json
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 from interface import cores
 
-LOG_DIR            = Path(__file__).parent / "logs"
+LOG_DIR            = ROOT_DIR / "logs"
 ARQUIVO_FOTOGRAFOS = LOG_DIR / "fotografos.json"
 ARQUIVO_EQUIPE     = LOG_DIR / "equipe_dia.json"
 
